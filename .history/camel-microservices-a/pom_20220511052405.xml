@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.camel.micro</groupId>
-	<artifactId>camel-microservices-b</artifactId>
+	<artifactId>camel-microservices-a</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>camel-microservices-b</name>
+	<name>camel-microservices-a</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -30,16 +30,7 @@
 			<artifactId>camel-spring-boot-starter</artifactId>
 			<version>3.16.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-activemq-starter</artifactId>
-			<version>3.16.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-jackson-starter</artifactId>
-			<version>3.16.0</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
