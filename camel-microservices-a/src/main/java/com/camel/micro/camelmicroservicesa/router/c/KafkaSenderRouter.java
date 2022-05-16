@@ -3,7 +3,7 @@ package com.camel.micro.camelmicroservicesa.router.c;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class KafkaSenderRouter extends RouteBuilder{
 
     @Override
