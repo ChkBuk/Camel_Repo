@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class MyFirstRouter extends RouteBuilder{
 
     @Autowired
@@ -36,7 +36,7 @@ public class MyFirstRouter extends RouteBuilder{
         Logger logger = LoggerFactory.getLogger(SimpleLoggingComponenet.class);
         @Override
         public void process(Exchange exchange) throws Exception {
-            logger.info( "SimpleLoggingProcessor {} ", exchange.getMessage().getBody());
+            logger.info( "Logging Time now is: "+LocalDateTime.now());
             
         }
 
@@ -48,7 +48,7 @@ public class MyFirstRouter extends RouteBuilder{
 class GetCurrentTimeBean{
 
     public String getCurrentTime(){
-        return "Time now is *** : "+LocalDateTime.now();
+        return "Time now is: "+LocalDateTime.now();
     }
 }
 
