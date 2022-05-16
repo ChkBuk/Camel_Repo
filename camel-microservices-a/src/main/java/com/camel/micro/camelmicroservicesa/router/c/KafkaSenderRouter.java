@@ -4,7 +4,7 @@ import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ActiveMQSenderRouter extends RouteBuilder{
+public class KafkaSenderRouter extends RouteBuilder{
 
     @Override
     public void configure() throws Exception {
@@ -17,9 +17,9 @@ public class ActiveMQSenderRouter extends RouteBuilder{
 //        .to("activemq:my-activemq-queue");
 //       
     	
-    	from("file:files/xml")
+    	from("file:files/json")
         .log("${body}")
-        .to("activemq:my-activemq-xml-queue");
+        .to("kafka:myKafkaTopic");
        
     }
     
