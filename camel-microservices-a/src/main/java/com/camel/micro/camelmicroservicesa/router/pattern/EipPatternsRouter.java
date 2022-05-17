@@ -17,8 +17,9 @@ public class EipPatternsRouter extends RouteBuilder{
 //        .to("log:something1", "log:something2", "log:something3");
 //        
         from("file:files/csv")
-        .unmarshal().csv()  // to get output line by line
-        .split(body())
+        .convertBodyTo(String.class)
+        //.unmarshal().csv()  // to get output line by line
+        .split(body(),",")
         .to("activemq:split-queue");
     }
     
